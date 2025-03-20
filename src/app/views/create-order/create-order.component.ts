@@ -2,16 +2,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { TeaCatalogService } from 'src/app/services/tea-catalog.service';
-import { TeaDataService } from 'src/app/services/tea-data.service';
-import { TeaCard } from 'src/app/types/tea-card.type';
+import { TeaCatalogService } from 'src/app/shared/services/tea-catalog.service';
+import { TeaDataService } from 'src/app/shared/services/tea-data.service';
+import { TeaCard } from 'src/app/shared/types/tea-card.type';
+import { addressValidator, lettersOnlyValidator, phoneValidator } from 'src/app/shared/validators/custom-validators';
 
-import { addressValidator, lettersOnlyValidator, phoneValidator } from 'src/app/validators/custom-validators';
+
 
 @Component({
   selector: 'create-order-component',
-  templateUrl: './create-order.component.html',
-  styleUrls: ['./create-order.component.scss']
+  templateUrl: '../create-order/create-order.component.html',
+  styleUrls: ['../create-order/create-order.component.scss']
 })
 export class CreateOrderComponent implements OnInit, OnDestroy {
   orderForm!: FormGroup;
@@ -30,7 +31,7 @@ export class CreateOrderComponent implements OnInit, OnDestroy {
     this.orderForm = this.fb.group({
       product: [{ value: '', disabled: true }],
       comment: [''],
-      name: ['', [Validators.required, lettersOnlyValidator()]], 
+      name: ['', [Validators.required, lettersOnlyValidator()]],
       last_name: ['', [Validators.required, lettersOnlyValidator()]],
       phone: ['', [Validators.required, phoneValidator()]],
       country: ['', [Validators.required, lettersOnlyValidator()]],

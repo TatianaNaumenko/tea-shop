@@ -4,46 +4,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/common/footer/footer.component';
-import { HeaderComponent } from './components/common/header/header.component';
-import { TeaCardComponent } from './components/common/tea-card/tea-card.component';
-import { MainComponent } from './components/pages/main/main.component';
-import { CatalogComponent } from './components/pages/catalog/catalog.component';
-import { CreateOrderComponent } from './components/pages/create-order/create-order.component';
-import { TeaDetailsComponent } from './components/pages/tea-details/tea-details.component';
+
 import { HttpClientModule } from '@angular/common/http';
-import { PopupComponent } from './components/common/popup/popup.component';
-import { LoaderComponent } from './components/common/loader/loader.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { TeaCatalogService } from './services/tea-catalog.service';
-import { TeaDataService } from './services/tea-data.service';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TeaCatalogService } from './shared/services/tea-catalog.service';
+import { TeaDataService } from './shared/services/tea-data.service';
+
+import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    TeaCardComponent,
-    MainComponent,
-    CatalogComponent,
-    CreateOrderComponent,
-    TeaDetailsComponent,
-    PopupComponent,
-    LoaderComponent,
+
 
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
+    SharedModule,
+    AppRoutingModule,
+
 
   ],
   providers: [

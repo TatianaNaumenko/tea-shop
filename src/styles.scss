@@ -70,32 +70,29 @@ html, body {
 
 }
 
-// #alluring-top {
-//   color: rgb(111, 0, 255);
-// }
-// #accordionPanelsStayOpenExample .accordion  {
-//   max-width: 856px;
-//   margin: 50px auto 0;
-// }
-// .accordion-button.my-style__accordion-button {
-//   border: none;
-//   color: #ffffff;
-//   background: linear-gradient(360deg, #076bff 0%, #007bff 100%);
-//   border-radius: 10px;
-//   height: 69px;
-//   margin-bottom: 16px;
-//   font-size: 20px;
-// }
+#alluring-top {
+  color: rgb(111, 0, 255);
+}
+#accordionPanelsStayOpenExample .accordion  {
+  max-width: 856px;
+  margin: 50px auto 0;
+}
+.accordion-button.my-style__accordion-button {
+  border: none;
+  color: #ffffff;
+  background: linear-gradient(360deg, #076bff 0%, #007bff 100%);
+  border-radius: 10px;
+  height: 69px;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
 
-// .accordion-button::after {
-//   content: none;
-// }
+.accordion-button::after {
+  content: none;
+}
 
-// .my-style__accordion-button::after {
-//   // content: url(../src/assets/images/down.svg);
-//   // color: #ffffff;
 
-// }
+
 
 
 

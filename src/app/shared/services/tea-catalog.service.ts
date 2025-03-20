@@ -4,9 +4,7 @@ import { Observable } from 'rxjs';
 import { TeaCard } from '../types/tea-card.type';
 import { OrderData } from '../types/order-data.type';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TeaCatalogService {
   private apiUrl = 'https://testologia.ru';
 

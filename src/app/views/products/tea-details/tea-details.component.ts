@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TeaCatalogService } from 'src/app/services/tea-catalog.service';
-import { TeaDataService } from 'src/app/services/tea-data.service';
-import { TeaCard } from 'src/app/types/tea-card.type';
+import { TeaCatalogService } from 'src/app/shared/services/tea-catalog.service';
+import { TeaDataService } from 'src/app/shared/services/tea-data.service';
+import { TeaCard } from 'src/app/shared/types/tea-card.type';
 
 @Component({
   selector: 'tea-details',

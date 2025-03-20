@@ -1,10 +1,10 @@
+import { TeaCatalogService } from 'src/app/shared/services/tea-catalog.service';
 
-import { TeaCatalogService } from './../../../services/tea-catalog.service';
 
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { delay, Subscription, tap } from 'rxjs';
-import { TeaCard } from 'src/app/types/tea-card.type';
+import { TeaCard } from 'src/app/shared/types/tea-card.type';
 
 @Component({
   selector: 'catalog-component',
@@ -20,7 +20,7 @@ export class CatalogComponent implements OnInit, OnDestroy {
 
   filteredTeas: TeaCard[] = [];
   searchQuery: string = '';
-  constructor(private teaCatalogService: TeaCatalogService,
+  constructor(private TeaCatalogService: TeaCatalogService,
     private router: Router, private route: ActivatedRoute
   ) { }
 
@@ -39,7 +39,7 @@ export class CatalogComponent implements OnInit, OnDestroy {
 
 
   loadTeaCatalog(): void {
-    this.subscriptionTeaCtalogService = this.teaCatalogService.getTeaCatalog()
+    this.subscriptionTeaCtalogService = this.TeaCatalogService.getTeaCatalog()
       .subscribe({
         next: (data: TeaCard[]) => {
           this.teaCatalog = data;

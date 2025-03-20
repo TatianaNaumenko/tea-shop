@@ -8,5 +8,5 @@ declare var $: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tea-shop-hw22';
+  title = 'tea-shop-hw23';
 }

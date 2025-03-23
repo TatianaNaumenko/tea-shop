@@ -1,5 +1,5 @@
 .container{
-  height: 100vh;
+ min-height: 100vh;
 }
 .tea {
   max-width: 100%;
@@ -16,8 +16,31 @@
 
 }
 
+.tea-image {
+  border-radius: 50%;
+  max-width:  500px;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 70s linear infinite;
+}
+.tea-image img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .tea img {
-  width: 300px;
+  width: 500px;
 }
 
 .tea-title {
@@ -27,5 +50,6 @@
 }
 
 .tea-description {
-  width: 70%;
+  width: 100%;
 }
+

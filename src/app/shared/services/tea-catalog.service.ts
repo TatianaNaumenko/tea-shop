@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TeaCard } from '../types/tea-card.type';
 import { OrderData } from '../types/order-data.type';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class TeaCatalogService {
-  private apiUrl = 'https://testologia.ru';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 

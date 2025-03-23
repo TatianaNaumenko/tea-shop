@@ -1,16 +1,4 @@
-<!-- <section class="tea-collection d-flex flex-column min-vh-100 ">
-  <h1 class="h1 " *ngIf="!searchQuery">Наши чайные коллекции</h1>
-  <div class="tea-collection-items ">
 
-
-<tea-card *ngFor="let teaCard of teaCatalog" [teaCard]="teaCard" class="tea-card" ></tea-card>
-
-
-  </div>
-<app-loader [isLoading]="isLoading" ></app-loader>
-
-
-</section> -->
 <section class="tea-collection d-flex flex-column min-vh-100">
   <h1 class="h1" *ngIf="!searchQuery">Наши чайные коллекции</h1>
   <h1 class="h1" *ngIf="searchQuery && filteredTeas.length > 0">
@@ -31,5 +19,5 @@
   </div>
 
   <!-- Компонент загрузки -->
-  <!-- <app-loader [isLoading]="isLoading"></app-loader> -->
+  <app-loader [isLoading]="isLoading"></app-loader>
 </section>

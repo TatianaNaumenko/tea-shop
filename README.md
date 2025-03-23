@@ -1,6 +1,6 @@
-# TeaShopHw22
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+<a href="https://tatiananaumenko.github.io/tea-shop/" target="_blank">
+  Версия сайта Tea-shop
+</a>
 
 ## Development server
 
